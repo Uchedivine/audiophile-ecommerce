@@ -1,4 +1,4 @@
-export default function Home() {
+export default function SpeakersPage() {
   return (
     <main>
       {/* HEADER */}
@@ -6,15 +6,17 @@ export default function Home() {
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-[165px]">
           <div className="flex items-center justify-between h-24">
             {/* Logo */}
-            <h1 className="text-white text-[25px] font-bold">
-              audiophile
-            </h1>
+            <a href="/">
+              <h1 className="text-white text-[25px] font-bold">
+                audiophile
+              </h1>
+            </a>
 
             {/* Navigation */}
             <nav className="hidden md:flex items-center gap-[34px] text-white text-[13px] font-bold tracking-[2px] uppercase">
               <a href="/" className="hover:text-[#D87D4A] transition-colors">Home</a>
               <a href="/headphones" className="hover:text-[#D87D4A] transition-colors">Headphones</a>
-              <a href="/speakers" className="hover:text-[#D87D4A] transition-colors">Speakers</a>
+              <a href="/speakers" className="text-[#D87D4A]">Speakers</a>
               <a href="/earphones" className="hover:text-[#D87D4A] transition-colors">Earphones</a>
             </nav>
 
@@ -28,46 +30,83 @@ export default function Home() {
         </div>
       </header>
 
-      {/* HERO SECTION - Background Image Method */}
-      <section 
-        className="relative bg-[#191919] min-h-[510px] md:min-h-[639px] lg:min-h-[729px] flex items-center"
-        style={{
-          backgroundImage: "url('/hero-headphones.png')",
-          backgroundPosition: "center right",
-          backgroundSize: "contain",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        {/* Dark overlay to blend image with background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#191919] via-[#191919]/95 to-transparent"></div>
-        
-        <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-[165px] w-full relative z-10">
-          <div className="max-w-[379px]">
-            {/* New Product Label */}
-            <p className="text-white/50 text-[14px] font-normal tracking-[10px] uppercase mb-6">
-              New Product
-            </p>
-            
-            {/* Heading */}
-            <h2 className="text-white text-[36px] md:text-[46px] lg:text-[56px] font-bold uppercase leading-[1] tracking-[2px] mb-6">
-              XX99 Mark II<br />Headphones
-            </h2>
-            
-            {/* Description */}
-            <p className="text-white/75 text-[15px] font-medium leading-[25px] mb-10">
-              Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.
-            </p>
-            
-            {/* CTA Button */}
-            <button className="bg-[#D87D4A] hover:bg-[#FBAF85] text-white uppercase text-[13px] font-bold tracking-[1px] px-[31px] py-[15px] transition-colors">
-              See Product
-            </button>
+      {/* PAGE HEADER */}
+      <section className="bg-[#191919] text-white">
+        <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-[165px]">
+          <div className="flex items-center justify-center h-[192px] md:h-[246px]">
+            <h1 className="text-[28px] md:text-[40px] font-bold uppercase tracking-[2px]">
+              Speakers
+            </h1>
           </div>
         </div>
       </section>
 
+      {/* PRODUCTS SECTION */}
+      <section className="bg-white py-[64px] md:py-[120px]">
+        <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-[165px]">
+          
+          {/* ZX9 Speaker - Product 1 */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-[125px] items-center mb-[120px] md:mb-[160px]">
+            {/* Image */}
+            <div className="bg-[#F1F1F1] rounded-lg flex items-center justify-center h-[352px] md:h-[560px]">
+              <img 
+                src="/speaker1.png" 
+                alt="ZX9 Speaker"
+                className="w-[200px] md:w-[350px] h-auto object-contain"
+              />
+            </div>
+
+            {/* Content */}
+            <div>
+              <p className="text-[#D87D4A] text-[14px] font-normal tracking-[10px] uppercase mb-4">
+                New Product
+              </p>
+              <h2 className="text-black text-[28px] md:text-[40px] font-bold uppercase leading-[1.1] tracking-[1.5px] mb-6">
+                ZX9<br />Speaker
+              </h2>
+              <p className="text-black/50 text-[15px] font-medium leading-[25px] mb-8">
+                Upgrade your sound system with the all new ZX9 active speaker. It's a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.
+              </p>
+              <a href="/speakers/zx9">
+                <button className="bg-[#D87D4A] hover:bg-[#FBAF85] text-white uppercase text-[13px] font-bold tracking-[1px] px-[31px] py-[15px] transition-colors">
+                  See Product
+                </button>
+              </a>
+            </div>
+          </div>
+
+          {/* ZX7 Speaker - Product 2 */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-[125px] items-center mb-[120px] md:mb-[160px]">
+            {/* Content - Order reversed on desktop */}
+            <div className="order-2 lg:order-1">
+              <h2 className="text-black text-[28px] md:text-[40px] font-bold uppercase leading-[1.1] tracking-[1.5px] mb-6">
+                ZX7<br />Speaker
+              </h2>
+              <p className="text-black/50 text-[15px] font-medium leading-[25px] mb-8">
+                Stream high quality sound wirelessly with minimal loss. The ZX7 bookshelf speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.
+              </p>
+              <a href="/speakers/zx7">
+                <button className="bg-[#D87D4A] hover:bg-[#FBAF85] text-white uppercase text-[13px] font-bold tracking-[1px] px-[31px] py-[15px] transition-colors">
+                  See Product
+                </button>
+              </a>
+            </div>
+
+            {/* Image */}
+            <div className="bg-[#F1F1F1] rounded-lg flex items-center justify-center h-[352px] md:h-[560px] order-1 lg:order-2">
+              <img 
+                src="/speaker3.png" 
+                alt="ZX7 Speaker"
+                className="w-[200px] md:w-[350px] h-auto object-contain"
+              />
+            </div>
+          </div>
+
+        </div>
+      </section>
+
       {/* CATEGORY CARDS SECTION */}
-      <section className="bg-white py-[120px] md:py-[148px] lg:py-[168px]">
+      <section className="bg-white py-[120px] md:py-[120px]">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-[165px]">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-[10px] lg:gap-[30px]">
             
@@ -144,107 +183,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ZX9 SPEAKER SECTION */}
-      <section className="bg-white pb-[48px] md:pb-[48px]">
-        <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-[165px]">
-          <div className="bg-[#D87D4A] rounded-lg overflow-hidden relative min-h-[560px] md:min-h-[720px] flex items-center">
-            
-            {/* Background Pattern Circles */}
-            <div className="absolute inset-0 overflow-hidden">
-              <div className="absolute top-[-150px] left-[-150px] w-[800px] h-[800px] rounded-full border border-white/20"></div>
-              <div className="absolute top-[-100px] left-[-100px] w-[700px] h-[700px] rounded-full border border-white/20"></div>
-              <div className="absolute top-[-50px] left-[-50px] w-[600px] h-[600px] rounded-full border border-white/20"></div>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full relative z-10">
-              
-              {/* Left Column - Speaker Image */}
-              <div className="flex items-end justify-center pt-[54px] lg:pt-0 lg:items-center">
-                <div className="relative w-[172px] h-[207px] md:w-[197px] md:h-[237px] lg:w-[410px] lg:h-[493px]">
-                  <img 
-                    src="/speaker1.png" 
-                    alt="ZX9 Speaker"
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-              </div>
-
-              {/* Right Column - Text Content */}
-              <div className="text-center lg:text-left flex flex-col justify-center px-6 lg:px-0 lg:pr-[95px] pb-[55px] lg:pb-0">
-                <h2 className="text-white text-[36px] md:text-[56px] font-bold uppercase leading-[1] tracking-[2px] mb-6">
-                  ZX9<br />Speaker
-                </h2>
-                <p className="text-white/75 text-[15px] font-medium leading-[25px] mb-10 max-w-[349px] mx-auto lg:mx-0">
-                  Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.
-                </p>
-                <div>
-                  <button className="bg-black hover:bg-[#4C4C4C] text-white uppercase text-[13px] font-bold tracking-[1px] px-[31px] py-[15px] transition-colors">
-                    See Product
-                  </button>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ZX7 SPEAKER SECTION */}
-      <section className="bg-white py-[48px] md:py-[48px]">
-        <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-[165px]">
-          <div 
-            className="rounded-lg overflow-hidden relative min-h-[320px] flex items-center bg-cover bg-center"
-            style={{
-              backgroundImage: "url('/speaker2.png')",
-            }}
-          >
-            <div className="pl-6 md:pl-[62px] lg:pl-[95px]">
-              <h2 className="text-black text-[28px] font-bold uppercase tracking-[2px] mb-8">
-                ZX7 Speaker
-              </h2>
-              <button className="border-2 border-black bg-transparent hover:bg-black hover:text-white text-black uppercase text-[13px] font-bold tracking-[1px] px-[31px] py-[15px] transition-colors">
-                See Product
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* YX1 EARPHONES SECTION */}
-      <section className="bg-white py-[48px] md:py-[48px]">
-        <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-[165px]">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-[11px] md:gap-[30px]">
-            
-            {/* Left - Image */}
-            <div 
-              className="rounded-lg overflow-hidden min-h-[200px] md:min-h-[320px] bg-cover bg-center"
-              style={{
-                backgroundImage: "url('/ep2.png')",
-              }}
-            ></div>
-
-            {/* Right - Content */}
-            <div className="bg-[#F1F1F1] rounded-lg flex flex-col justify-center pl-6 md:pl-[62px] lg:pl-[95px] min-h-[200px] md:min-h-[320px]">
-              <h2 className="text-black text-[28px] font-bold uppercase tracking-[2px] mb-8">
-                YX1 Earphones
-              </h2>
-              <button className="border-2 border-black bg-transparent hover:bg-black hover:text-white text-black uppercase text-[13px] font-bold tracking-[1px] px-[31px] py-[15px] transition-colors w-fit">
-                See Product
-              </button>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
       {/* BEST AUDIO GEAR SECTION */}
-      <section className="bg-white py-[120px] md:py-[96px]">
+      <section className="bg-white py-[120px] md:py-[120px]">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-[165px]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-[125px] items-center">
             
-            {/* Left Column - Text Content (on mobile appears second) */}
+            {/* Left Column - Text Content */}
             <div className="text-center lg:text-left order-2 lg:order-1">
-              <h2 className="text-[28px] md:text-[40px] font-bold uppercase leading-[1.1] tracking-[1.5px] mb-8">
+              <h2 className="text-black text-[28px] md:text-[40px] font-bold uppercase leading-[1.1] tracking-[1.5px] mb-8">
                 Bringing you the <span className="text-[#D87D4A]">best</span> audio gear
               </h2>
               <p className="text-black/50 text-[15px] font-medium leading-[25px]">
@@ -280,9 +226,11 @@ export default function Home() {
             {/* Top Row - Logo and Navigation */}
             <div className="flex flex-col lg:flex-row justify-between items-center mb-[48px] md:mb-[32px]">
               {/* Logo */}
-              <h2 className="text-[25px] font-bold mb-[48px] lg:mb-0">
-                audiophile
-              </h2>
+              <a href="/">
+                <h2 className="text-[25px] font-bold mb-[48px] lg:mb-0">
+                  audiophile
+                </h2>
+              </a>
 
               {/* Navigation */}
               <nav className="flex flex-col md:flex-row items-center gap-4 md:gap-[34px] text-[13px] font-bold tracking-[2px] uppercase">
@@ -330,7 +278,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-
     </main>
   )
 }

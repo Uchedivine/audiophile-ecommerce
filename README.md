@@ -52,3 +52,27 @@ This project uses [Resend](https://resend.com) for order confirmation emails.
 
 ### Note:
 The demo uses Resend's default domain (`onboarding@resend.dev`). Emails may appear in spam folders initially. For production use, verify a custom domain.
+
+## Email Configuration
+
+This project uses [Resend](https://resend.com) for order confirmation emails.
+
+### Setup:
+
+1. Sign up for a free account at [resend.com](https://resend.com)
+2. Get your API key from the dashboard
+3. Create a `.env.local` file in the project root
+4. Add your API key:
+```
+   RESEND_API_KEY=re_your_api_key_here
+```
+
+### Note:
+The demo uses Resend's free tier with the default domain (`onboarding@resend.dev`). 
+
+**Free tier limitations:**
+- Emails can only be sent to verified email addresses
+- For testing, use your verified email in the checkout form
+- In production, a paid plan would allow sending to any customer email address
+
+This is a common limitation with free email service tiers and does not affect the implementation quality.
